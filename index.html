@@ -3,27 +3,47 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Personal Budget</title>
-    <link rel="stylesheet" href="/reset.css">
-    <link rel="stylesheet" href="/main.css">
+    <!-- SEO Change 1: Added a descriptive <title> for the page -->
+    <title>Manage Your Finances with Personal Budget App</title> 
+     <!-- SEO Change 2: Added a <meta> description for search engines -->
+     <meta name="description" content="Track expenses.">
+
+    <link rel="stylesheet" href="/reset.css"> <!-- absolute path reference-->
+    <link rel="stylesheet" href="/main.css">  <!-- absolute path reference-->
+    <link rel="stylesheet" href="css/reset.css"> <!-- relative path reference-->
+    <link rel="stylesheet" href="css/main.css">  <!-- relative path reference-->
+
 </head>
 <body>
 
-    <div class="menu">
+    <!-- Semantic Change 1: Changed <div class="menu"> to <nav> -->
+    <nav class="menu">
         <ul>
-            <li><a href="/">Homepage</a></li>
-            <li><a href="/about.html">About</a></li>
-            <li><a href="/login.html">Login</a></li>
-            <li><a href="https://google.com">Google</a></li>
+            <!-- A11y Change 1: Added aria-label to the menu links for screen reader users -->
+            <li><a href="/" aria-label="Go to Homepage">Homepage</a></li>
+            <li><a href="/about.html" aria-label="Learn About Us">About</a></li>
+            <li><a href="/login.html" aria-label="Login to Your Account">Login</a></li>
+            <li><a href="https://google.com" aria-label="Visit Google">Google</a></li>
         </ul>
-    </div>
+    </nav>
 
-    <div class="hero">
+    <!-- Semantic Change 2: Changed <div class="hero"> to <header> -->
+    <header class="hero">
+        
         <h1>Personal Budget</h1>
         <h2>A personal-budget management app</h2>
-    </div>
+        <!-- A11y Change 2: Added role="img" to the logo for screen reader users -->
+        <!-- SEO Change 3: Added alt attribute to the <img> for accessibility -->
+        <img src="budget.png" alt="Personal Budget Logo" role="img"style="width: 40px; height: 40px;">
+               <!-- A11y Change 3: Added aria-labelledby to associate labels with input fields -->
+               <label for="username" id="username">Username:</label>
+    <input type="text" id="username" aria-labelledby="username">
 
-    <div class="container center">
+    
+    </header>
+
+    <!-- Semantic Change 3: Changed <div class="container center"> to <main> -->
+    <main class="container center">
 
         <div class="page-area">
 
@@ -93,13 +113,15 @@
 
         </div>
 
-    </div>
+    </main>
 
     <div class="bottom">
         <div class="center">
-            All rights reserved &copy; Fabio Nolasco
+            All rights reserved &copy; Mahipal's Test
         </div>
     </div>
+
+
 
 </body>
 </html>
