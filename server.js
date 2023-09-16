@@ -42,7 +42,7 @@ app.get('/hello', (req, res) => {
 });
 
 app.use('/budget', (req, res) => {
-    res.json(budget);
+    res.sendFile("C:\\Users\\appgu\\OneDrive\\Desktop\\UNC\\Sem 1\\NBAD\\week3\\personal-budget1\\server.json");
 })
 
 
